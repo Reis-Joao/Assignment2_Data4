@@ -12,6 +12,8 @@ d_ln_forest_area	-0.010
 	(0.161)
 d_renewable_energy	-0.027**
 	(0.003)
+year	-0.000
+	(0.000)
 Constant	0.207
 	(0.471)
 	
