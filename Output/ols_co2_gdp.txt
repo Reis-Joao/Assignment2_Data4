@@ -1,0 +1,13 @@
+	(1)	(2)
+	Year = 1995	Year = 2018
+VARIABLES	CO2 Emissions per Capita	CO2 Emissions per Capita
+		
+gdp_per_capita	0.000**	3.804
+	(0.000)	(3.517)
+Constant	0.000	117,888.476
+	(0.000)	(100,501.437)
+		
+Observations	167	167
+R-squared	0.748	0.007
+Standard errors in parentheses		
+** p<0.01, * p<0.05		

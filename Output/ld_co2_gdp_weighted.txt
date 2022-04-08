@@ -1,0 +1,13 @@
+	(1)
+	Long Difference Model
+VARIABLES	LD Natural logarithm of CO2 Emissions per Capita
+	
+ld_ln_gdp_per_capita	0.592**
+	(0.128)
+Constant	0.304*
+	(0.118)
+	
+Observations	4,008
+R-squared	0.342
+Robust standard errors in parentheses	
+** p<0.01, * p<0.05	

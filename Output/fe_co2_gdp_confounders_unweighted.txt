@@ -1,0 +1,68 @@
+	(1)
+	Fixed Effects
+VARIABLES	Natural logarithm of CO2 Emissions per Capita
+	
+ln_gdp_per_capita	0.300**
+	(0.089)
+ln_population	0.184
+	(0.237)
+ln_urban_population	0.758**
+	(0.175)
+ln_forest_area	-0.120
+	(0.144)
+renewable_energy	-0.018**
+	(0.003)
+1996.year	0.001
+	(0.008)
+1997.year	-0.000
+	(0.012)
+1998.year	0.006
+	(0.015)
+1999.year	-0.005
+	(0.018)
+2000.year	-0.003
+	(0.022)
+2001.year	-0.002
+	(0.024)
+2002.year	-0.010
+	(0.027)
+2003.year	0.004
+	(0.030)
+2004.year	0.005
+	(0.034)
+2005.year	0.009
+	(0.037)
+2006.year	0.008
+	(0.041)
+2007.year	-0.002
+	(0.044)
+2008.year	-0.015
+	(0.047)
+2009.year	0.030
+	(0.053)
+2010.year	-0.015
+	(0.050)
+2011.year	-0.010
+	(0.053)
+2012.year	0.011
+	(0.057)
+2013.year	-0.014
+	(0.058)
+2014.year	-0.023
+	(0.061)
+2015.year	-0.029
+	(0.063)
+2016.year	-0.017
+	(0.065)
+2017.year	-0.022
+	(0.069)
+2018.year	-0.024
+	(0.072)
+Constant	-5.822
+	(3.062)
+	
+Observations	4,008
+Number of countryid	167
+R-squared	0.730
+Robust standard errors in parentheses	
+** p<0.01, * p<0.05	

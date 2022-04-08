@@ -1,0 +1,21 @@
+	(1)	(2)
+	Year = 1995	Year = 2018
+VARIABLES	Natural logarithm of CO2 Emissions per Capita	Natural logarithm of CO2 Emissions per Capita
+		
+ln_gdp_per_capita	0.675**	0.797**
+	(0.062)	(0.047)
+ln_population	0.655**	0.916**
+	(0.136)	(0.102)
+ln_urban_population	0.315*	0.037
+	(0.133)	(0.097)
+ln_forest_area	0.076**	0.050**
+	(0.024)	(0.018)
+renewable_energy	-0.024**	-0.020**
+	(0.002)	(0.002)
+Constant	-11.605**	-12.744**
+	(0.750)	(0.587)
+		
+Observations	167	167
+R-squared	0.957	0.970
+Standard errors in parentheses		
+** p<0.01, * p<0.05		

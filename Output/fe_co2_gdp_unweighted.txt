@@ -1,0 +1,13 @@
+		(1)
+VARIABLES	LABELS	Natural logarithm of CO2 Emissions per Capita
+		
+ln_gdp_per_capita	Natural logarithm of GDP per Capita	0.395**
+		(0.111)
+Constant	Constant	5.486**
+		(0.988)
+		
+Observations		4,008
+Number of countryid		167
+R-squared		0.430
+Robust standard errors in parentheses		
+** p<0.01, * p<0.05		

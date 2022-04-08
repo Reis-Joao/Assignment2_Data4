@@ -1,0 +1,25 @@
+	(1)	(2)	(3)
+	FD With No Lags	FD With 2 Lags	FD With 6 Lags
+VARIABLES	FD Natural logarithm of CO2 Emissions per Capita	FD Natural logarithm of CO2 Emissions per Capita	FD Natural logarithm of CO2 Emissions per Capita
+			
+d_ln_gdp_per_capita	0.397**	0.368**	0.380**
+	(0.057)	(0.075)	(0.079)
+L.d_ln_gdp_per_capita		0.124	0.190*
+		(0.065)	(0.083)
+L2.d_ln_gdp_per_capita		-0.019	-0.087
+		(0.041)	(0.051)
+L3.d_ln_gdp_per_capita			0.006
+			(0.058)
+L4.d_ln_gdp_per_capita			0.061
+			(0.073)
+L5.d_ln_gdp_per_capita			-0.036
+			(0.066)
+L6.d_ln_gdp_per_capita			0.079
+			(0.045)
+Constant	0.673	0.438	0.513
+	(0.472)	(0.529)	(0.698)
+			
+Observations	3,841	3,507	2,839
+R-squared	0.025	0.024	0.028
+Robust standard errors in parentheses			
+** p<0.01, * p<0.05			
