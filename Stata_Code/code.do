@@ -441,7 +441,7 @@ outreg2 using "$output\ols_lnco2_lngdp_confounders", se bdec(3) 2aster tex(fragm
 
 * Basic FD
 reg d_ln_CO2_emissions_per_capita d_ln_gdp_per_capita d_ln_population d_ln_urban_population d_ln_forest_area d_renewable_energy c.year [w=population], cluster(countryid)
-outreg2 using "$output\fd_co2_confounders_weighted", se bdec(3) 2aster tex(fragment) keep(d_ln_gdp_per_capita d_ln_population d_ln_urban_population d_ln_forest_area d_renewable_energy) replace ctitle("FD With No Lags, FD Natural logarithm of CO2 Emissions per Capita")
+outreg2 using "$output\fd_co2_confounders_weighted", se bdec(3) 2aster tex(fragment) keep(d_ln_gdp_per_capita d_ln_population d_ln_urban_population d_ln_forest_area d_renewable_energy c.year) replace ctitle("FD With No Lags, FD Natural logarithm of CO2 Emissions per Capita")
 
 * In FE Regressions *
 xtreg ln_CO2_emissions_per_capita ln_gdp_per_capita ln_population ln_urban_population ln_forest_area renewable_energy i.year [w=average_population], fe cluster(countryid) /* ln_CO2_emissions on ln_gdp_per_capita controling for ln_population - year fixed effects changed, meaning part of what previously explained by it is not explained by ln_pop - population grew across time */
@@ -463,15 +463,15 @@ reg d_ln_CO2_emissions_per_capita d_ln_gdp_per_capita c.year, cluster(countryid)
 outreg2 using "$output\fd_co2_gdp_unweighted", se bdec(3) 2aster tex(fragment) keep(d_ln_gdp_per_capita) replace ctitle("FD With No Lags, FD Natural logarithm of CO2 Emissions per Capita")
 
 reg d_ln_CO2_emissions_per_capita d_ln_gdp_per_capita d_ln_population d_ln_urban_population d_ln_forest_area d_renewable_energy c.year, cluster(countryid)
-outreg2 using "$output\fd_co2_confounders_unweighted", se bdec(3) 2aster tex(fragment) keep(d_ln_gdp_per_capita d_ln_population d_ln_urban_population d_ln_forest_area d_renewable_energy) replace ctitle("FD With No Lags, FD Natural logarithm of CO2 Emissions per Capita")
+outreg2 using "$output\fd_co2_confounders_unweighted", se bdec(3) 2aster tex(fragment) keep(d_ln_gdp_per_capita d_ln_population d_ln_urban_population d_ln_forest_area d_renewable_energy c.year) replace ctitle("FD With No Lags, FD Natural logarithm of CO2 Emissions per Capita")
 
 * FD with 2 lags
 reg d_ln_CO2_emissions_per_capita L(0/2).d_ln_gdp_per_capita c.year, cluster(countryid)
-outreg2 using "$output\fd_co2_gdp_unweighted", se bdec(3) 2aster tex(fragment) keep(L(0/2).d_ln_gdp_per_capita) append ctitle("FD With 2 Lags, FD Natural logarithm of CO2 Emissions per Capita")
+outreg2 using "$output\fd_co2_gdp_unweighted", se bdec(3) 2aster tex(fragment) keep(L(0/2).d_ln_gdp_per_capita c.year) append ctitle("FD With 2 Lags, FD Natural logarithm of CO2 Emissions per Capita")
 
 * FD with 6 lags
 reg d_ln_CO2_emissions_per_capita L(0/6).d_ln_gdp_per_capita c.year, cluster(countryid)
-outreg2 using "$output\fd_co2_gdp_unweighted", se bdec(3) 2aster tex(fragment) keep(L(0/6).d_ln_gdp_per_capita) append ctitle("FD With 6 Lags, FD Natural logarithm of CO2 Emissions per Capita")
+outreg2 using "$output\fd_co2_gdp_unweighted", se bdec(3) 2aster tex(fragment) keep(L(0/6).d_ln_gdp_per_capita c.year) append ctitle("FD With 6 Lags, FD Natural logarithm of CO2 Emissions per Capita")
 
 * Testing if the cumulative coefficient is significant
 test d_ln_gdp_per_capita + L.d_ln_gdp_per_capita + L2.d_ln_gdp_per_capita + L3.d_ln_gdp_per_capita + L4.d_ln_gdp_per_capita + L5.d_ln_gdp_per_capita + L6.d_ln_gdp_per_capita = 0
